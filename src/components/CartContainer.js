@@ -46,6 +46,7 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
 };
 const mapStateToProps = (store) => {
   const { cart, total } = store;
+
   return { cart, total };
 };
 export default connect(mapStateToProps)(CartContainer);
