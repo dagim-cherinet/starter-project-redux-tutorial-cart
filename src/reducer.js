@@ -3,8 +3,8 @@ import {
   DECREASE,
   CLEAR_CART,
   REMOVE,
-  GET_AMOUNT,
-  GET_TOTAL,
+  GET_TOTALS,
+  TOGGLE_AMOUNT,
 } from "./actions";
 const reducer = (state, action) => {
   //console.log({ state, action });
@@ -43,12 +43,23 @@ const reducer = (state, action) => {
         (item) => item.id !== action.payload.id
       );
       return { ...state, cart: newCartItems };
-    case GET_AMOUNT:
-      // console.log("get amount");
-      return { ...state };
-    case GET_TOTAL:
-      // console.log("get total");
-      return { ...state };
+    case GET_TOTALS:
+      let { total, amount } = state.cart.reduce(
+        (cartTotal, cartItem) => {
+          let { price, amount } = cartItem;
+          //cartTotal.amount = cartTotal.amount + amount;
+          let totalItemPrice = price * amount;
+          cartTotal.total += totalItemPrice;
+          cartTotal.amount += amount;
+          return cartTotal;
+        },
+        {
+          total: 0,
+          amount: 0,
+        }
+      );
+      total = parseFloat(total.toFixed(2));
+      return { ...state, total, amount };
     default:
       return state;
   }
