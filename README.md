@@ -1,6 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React-redux cart project
 
-#[click here to see live demo](https://dagim-redux-cart.netlify.app/)
+[click here to see live demo](https://dagim-redux-cart.netlify.app/)
 
 ## Available Scripts
 
