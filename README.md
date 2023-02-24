@@ -1,6 +1,6 @@
 ## React-redux cart project
 
-#### [click here to see live demo](https://dagim-redux-cart.netlify.app/)
+#### [Click here to see live demo](https://dagim-redux-cart.netlify.app/)
 
 ## Available Scripts
 
