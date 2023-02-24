@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+#[click here to see live demo](https://dagim-redux-cart.netlify.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:
